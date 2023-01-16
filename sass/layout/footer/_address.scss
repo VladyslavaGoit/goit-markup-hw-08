@@ -1,0 +1,32 @@
+.address {
+    &__list {
+        @extend %list;
+    }
+&__link {
+    display: inline-block;
+    color: var(--primary-background-color);
+    font-style: normal;
+    letter-spacing: 0.03em;
+}
+
+&__contacts-link {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    letter-spacing: 0.03em;
+    @include transition(color);
+}
+
+&__contacts-link:hover,
+&__contacts-link:focus {
+    color: var(--accent-color);
+}
+
+&__item {
+    width: 230px;
+}
+
+&__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+}

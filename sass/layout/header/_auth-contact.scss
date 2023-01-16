@@ -1,0 +1,30 @@
+.auth-contact {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+
+&__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    fill: var(--primary-text-color);
+    color: var(--primary-text-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    
+    @include transition(color);
+}
+
+&__link:hover,
+&__link:focus {
+    color: var(--accent-color);
+    fill: currentColor;
+}
+}

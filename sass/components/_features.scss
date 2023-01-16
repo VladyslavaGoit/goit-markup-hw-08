@@ -1,0 +1,21 @@
+.features {
+    @extend %list;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+&__item {
+    width: 270px;
+}
+
+&__icon {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--team-background-color);
+}
+}
