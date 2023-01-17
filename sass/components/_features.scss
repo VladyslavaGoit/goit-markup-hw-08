@@ -1,15 +1,31 @@
 .features {
     @extend %list;
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 30px;}
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+    }
+
+
+&__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    }
+}
 
 &__item {
-    width: 270px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 1*30px)/2);
+    }
 }
 
 &__icon {
-    padding: 25px 100px;
+    padding: 25px 0;
     margin-bottom: 30px;
 
     display: flex;
@@ -17,5 +33,9 @@
     justify-content: center;
 
     background-color: var(--team-background-color);
+}
+&__text {
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
 }
 }

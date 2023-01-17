@@ -1,16 +1,25 @@
 .address {
-    &__list {
+    @media screen and (max-width: 1199px){
+    margin-bottom: 60px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-left: 61px;
+        margin-right: 165px;
+    }
+
+&__list {
         @extend %list;
     }
+
 &__link {
-    display: inline-block;
+    display: block;
     color: var(--primary-background-color);
     font-style: normal;
     letter-spacing: 0.03em;
 }
 
 &__contacts-link {
-    display: inline-block;
+    display: block;
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     letter-spacing: 0.03em;
@@ -23,7 +32,9 @@
 }
 
 &__item {
-    width: 230px;
+    @media screen and (max-width: 1199px) {
+   text-align: center;
+    }
 }
 
 &__item:not(:last-child) {
