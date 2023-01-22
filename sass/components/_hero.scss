@@ -1,33 +1,74 @@
 .hero {
-    max-width: 1600px;
-    margin-left: auto;
     margin-right: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    margin-left: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero.jpg);
+        url(../images/hero-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: var(--secondary-background-color);
 
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/hero-mobile@2x.jpg);
+        }
+    @media screen and (min-width: 577px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/tablet-hero.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/tablet-hero@2x.jpg);
+                    }
+    }
+        @media screen and (min-width: 961px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/desktop-hero.jpg);
+           
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                            url(../images/desktop-hero@2x.jpg);
+                }
+        }
+        @media screen and (min-width: 1200px) {
+                 padding-top: 200px;
+                 padding-bottom: 200px;
+        }
+    
+
 &__content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 700px;
+    max-width: 360px;
     text-align: center;
+    @media screen and (min-width: 1200px) {
+    max-width: 700px;
+    }
+ 
 }
 
 &__title {
-    margin-top: 0;
     margin-bottom: 30px;
-
+    
     color: var(--primary-background-color);
-
+    
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: calc(42/26);
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+
+    @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    }
 }
 }

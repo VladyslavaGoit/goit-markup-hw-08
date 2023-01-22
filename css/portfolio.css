@@ -10,7 +10,7 @@
 }
 
 .address__list, .social, .portfolio__cards, .portfolio__buttons, .auth-contact, .header__site-nav {
-  padding-left: 0;
+  padding: 0;
   margin: 0;
   list-style: none;
 }
@@ -42,6 +42,9 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   line-height: 1.7;
+}
+body.modal-open {
+  overflow: hidden;
 }
 
 img {
@@ -102,19 +105,27 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 320px;
+  gap: 88px;
 }
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  gap: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 96px;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .header__nav {
+    gap: 315px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
 }
 .header__site-nav {
   display: -webkit-box;
@@ -155,15 +166,27 @@ a {
   border-radius: 2px;
 }
 
-.auth-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
+@media screen and (min-width: 1200px) {
+  .auth-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth-contact {
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth-contact__item {
+    margin-bottom: 32px;
+  }
 }
 .auth-contact__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,24 +197,68 @@ a {
   fill: var(--primary-text-color);
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 767px) {
+  .auth-contact__link {
+    font-size: 24px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .auth-contact__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .auth-contact__link:hover, .auth-contact__link:focus {
   color: var(--accent-color);
   fill: currentColor;
+}
+@media screen and (max-width: 767px) {
+  .auth-contact__link:hover, .auth-contact__link:focus {
+    -webkit-transform: translateX(5%) scale(1.1);
+            transform: translateX(5%) scale(1.1);
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth-contact__icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .auth-contact__icon {
+    display: block;
+  }
 }
 
 .logo {
   color: var(--title-text-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.1923076923;
+  }
 }
 .logo__accent {
   color: var(--accent-color);
@@ -462,8 +529,12 @@ a {
 .footer__logo {
   display: block;
   margin-bottom: 20px;
-  text-align: center;
   color: var(--primary-background-color);
+}
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    text-align: center;
+  }
 }
 .footer__social-link {
   background-color: rgba(255, 255, 255, 0.1);

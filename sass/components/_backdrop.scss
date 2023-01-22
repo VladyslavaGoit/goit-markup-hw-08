@@ -1,4 +1,7 @@
 .backdrop {
+    padding-left: 15px;
+    padding-right: 15px;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +12,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     @include transition(opacity);
+    overflow-y: scroll;
 
 }
 

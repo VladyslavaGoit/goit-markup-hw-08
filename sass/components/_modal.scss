@@ -7,15 +7,23 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) scale(1);
-
     padding: 40px;
-
-    width: 530px;
-    height: 580px;
-
+    width: calc(100% - 2*15px);
+    max-width: 450px;
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     @include transition(transform);
+
+    // @media screen and (max-width: 767px) {
+    //     transform: translateX(-50%) translateY(-30%);
+    //     }
+
+    @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    height: 581px;
+    }
+
+    
 }

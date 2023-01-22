@@ -4,14 +4,23 @@
 &__container {
     display: flex;
     align-items: center;
-    gap: 320px;
+    gap: 88px;
+
 }
 
 &__nav {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    gap: 90px;
+        align-items: center;
+        display: flex;
+        gap: 96px;
+        align-items: center;
+    
+        @media screen and (min-width: 1200px) {
+            gap: 315px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
 }
 
 &__site-nav {
