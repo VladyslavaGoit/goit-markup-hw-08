@@ -12,6 +12,9 @@
     letter-spacing: 0.03em;
     user-select: none;
     cursor: pointer;
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+    }
 }
 
 &__link {
