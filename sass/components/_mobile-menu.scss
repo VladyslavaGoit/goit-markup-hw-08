@@ -38,6 +38,9 @@
     }
     &__item:not(:last-child) {
         margin-bottom: 32px;
+        @media screen and (max-width: 430px) {
+            margin-bottom: 28px;
+        }
     }
 
     &__link {
@@ -47,6 +50,9 @@
         line-height: calc(47/40);
         letter-spacing: 0.02em;
         @include transition(color);
+        @media screen and (max-width: 430px) {
+            font-size: 37px;
+        }
         
     }
 

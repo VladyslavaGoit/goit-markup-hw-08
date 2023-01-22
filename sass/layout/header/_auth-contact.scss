@@ -7,13 +7,18 @@
     }
     
      @media screen and (max-width: 767px) {
-         margin-bottom: 64px;
+         margin-bottom: auto;
      }
 
 &__item {
+   
     @media screen and (max-width: 767px) {
             margin-bottom: 32px;
         }
+     @media screen and (max-width: 430px) {
+            margin-bottom: 24px;
+        }
+        
 }
 
 &__link {
