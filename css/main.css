@@ -176,7 +176,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .auth-contact {
-    margin-bottom: auto;
+    margin-bottom: 64px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -266,7 +266,6 @@ a {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px 48px 40px;
   background-color: #ffffff;
   z-index: 999;
   overflow-y: scroll;
@@ -281,6 +280,14 @@ a {
 .menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.mobile-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 48px 40px 48px 40px;
+  max-width: 480px;
+  width: 100%;
 }
 
 .mobile-menu {
